@@ -1,8 +1,0 @@
-touch Dockerfile
-From node:16
-# Create app directory
-WORKDIR /usr/src/app
-COPY package*.json ./
-Copy . .
-EXPOSE 8080
-CMD [ "node", "server.js" ]
