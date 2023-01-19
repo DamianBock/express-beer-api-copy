@@ -5,7 +5,7 @@ import { SecondComponent } from './second/second.component';
 
 
 const routes: Routes = [
-  { path: 'first-component', component: FirstComponent },
+  { path: 'first-component/:id', component: FirstComponent },
   { path: 'second-component', component: SecondComponent },
 ];
 
