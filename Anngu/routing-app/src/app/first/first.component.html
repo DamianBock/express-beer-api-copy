@@ -2,33 +2,26 @@
 <h1>daad</h1>
 <button id="addToFav" onclick="addToFavorites();" value="1">Add to Favorites</button>
 <li><a routerLink="/second-component" routerLinkActive="active" ariaCurrentWhenActive="page">ond Component</a></li>
-<div class="container">
-  <div class="row">
-    <div class="col-md-3 mx-auto my-5" *ngFor="let card of cards">
-      <mat-card width="100">
-        <img
+  <div class="container">
+    <div class="content"  *ngFor="let Haus of HausA">
+      <mat-card class="item">
+         <img
         mat-card-image
         src="https://material.angular.io/assets/img/examples/shiba2.jpg"
         alt="Photo of a Shiba Inu"
-        width="500" height="600"
-        />
 
+        />
         <mat-card-content>
           <p>
             <strong>
-            {{card.text}}</strong
+            {{Haus.Adresse}}</strong
             >
-            Its scientific name is Canis lupus familiaris. Dogs are a subspecies of
-            the gray wolf, and they are also related to foxes and jackals. Dogs are
-            one of the two most ubiquitous and most popular domestic animals in the
-            world.
           </p>
         </mat-card-content>
-        <mat-card-actions align="end">
+        <mat-card-actions >
           <button mat-button>Like ❤️</button>
           <button mat-button>share 👍</button>
         </mat-card-actions>
       </mat-card>
     </div>
-  </div>
 </div>

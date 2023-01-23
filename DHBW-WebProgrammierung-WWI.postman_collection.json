@@ -1,0 +1,247 @@
+{
+	"info": {
+		"_postman_id": "c6ec9c30-63d2-4b8c-8d16-bc8c378ceb6e",
+		"name": "DHBW-WebProgrammierung-WWI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all Häuser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/HausA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"HausA"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Haus",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"Adresse\": \"Höhle\",\r\n    \"Beschreibung\": \"jdsah\",\r\n    \"Titel\": \"ssd\",\r\n    \"Groesse\": \"dsa\",\r\n    \"Typ\": \"Wohnung\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/Haus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Haus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Haus ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Haus/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Haus",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Haus",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Haus/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Haus",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Haus",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Adresse\": \"das \",\r\n    \"Beschreibung\": \"ads \",\r\n    \"Titel\": \" asd\",\r\n    \"Groesse\": \"asd \"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/Haus/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Haus",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Interessenten + 1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Adresse\": \" \",\r\n    \"Beschreibung\": \" \",\r\n    \"Titel\": \" \",\r\n    \"Groesse\": \" \"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/InteressentenP/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"InteressentenP",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Interessenten - 1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Adresse\": \" \",\r\n    \"Beschreibung\": \" \",\r\n    \"Titel\": \" \",\r\n    \"Groesse\": \" \"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/Haus/Urpils",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Haus",
+						"Urpils"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filtern nach Haustyp",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/HausATyp/Haus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"HausATyp",
+						"Haus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filtern nach Adresse",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/HausAAdresse/Höhle",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"HausAAdresse",
+						"Höhle"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Interessenten",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Interessenten/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Interessenten",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
