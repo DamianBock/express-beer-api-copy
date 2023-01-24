@@ -1,26 +1,22 @@
-<p>first works!</p>
-<h1>daad</h1>
-<button id="addToFav" onclick="addToFavorites();" value="1">Add to Favorites</button>
-<li><a routerLink="/second-component" routerLinkActive="active" ariaCurrentWhenActive="page">ond Component</a></li>
+<strong>Hauptmenü</strong>
   <div class="container">
     <div class="content"  *ngFor="let Haus of HausA">
       <mat-card class="item">
          <img
+         routerLink="/second-component/{{Haus.ID}}" routerLinkActive="active" ariaCurrentWhenActive="page"
         mat-card-image
-        src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+        src="..\..\assets\Haus.jpg"
         alt="Photo of a Shiba Inu"
-
         />
         <mat-card-content>
-          <p>
-            <strong>
-            {{Haus.Adresse}}</strong
-            >
-          </p>
+          <p>Titel: {{Haus.Titel}}</p>
+          <p>Typ: {{Haus.Typ}}</p>
+          <p>Adresse: {{Haus.Adresse}}</p>
+          <p>Beschreibung: {{Haus.Beschreibung}}</p>
+            
         </mat-card-content>
         <mat-card-actions >
-          <button mat-button>Like ❤️</button>
-          <button mat-button>share 👍</button>
+          <button mat-button class="item" id="Button{{Haus.ID}}}" (click)="addToFavorites(Haus.ID)">Interessiert {{Haus.Interessenten}}</button>
         </mat-card-actions>
       </mat-card>
     </div>
