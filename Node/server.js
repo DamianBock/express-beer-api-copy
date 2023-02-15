@@ -10,6 +10,7 @@ app.use(express.json());
 app.use(cors());
 app.use(express.static('public'));
 app.use("/", Routes);
+
 const logger = (req, res, next) => {
     console.log(`Received Request ${new Date(Date.now()).toLocaleString('de-DE')}`);
     console.log('HTTP METHOD', req.method);

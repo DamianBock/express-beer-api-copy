@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FirstComponent } from './first/first.component';
-import { SecondComponent } from './second/second.component';
+import { Start } from './start/start.component';
+import { Haus_Detail } from './haus-detail/haus-detail.component';
 
 
 const routes: Routes = [
-  { path: 'first-component/:id', component: FirstComponent },
-  { path: 'second-component/:id', component: SecondComponent },
+  { path: '', component: Start },
+  { path: 'haus/:id', component: Haus_Detail },
 ];
 
 @NgModule({

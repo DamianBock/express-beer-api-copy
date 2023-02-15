@@ -3,13 +3,13 @@
     <div class="content"  *ngFor="let Haus of HausA">
       <mat-card class="item">
          <img
-         routerLink="/second-component/{{Haus.ID}}" routerLinkActive="active" ariaCurrentWhenActive="page"
+         routerLink="/haus/{{Haus.ID}}" routerLinkActive="active" ariaCurrentWhenActive="page"
         mat-card-image
         src="..\..\assets\Haus.jpg"
         alt="Photo of a Shiba Inu"
         />
         <mat-card-content>
-          <p>Titel: {{Haus.Titel}}</p>
+          <strong>{{Haus.Titel}}</strong>
           <p>Typ: {{Haus.Typ}}</p>
           <p>Adresse: {{Haus.Adresse}}</p>
           <p>Beschreibung: {{Haus.Beschreibung}}</p>
