@@ -1,13 +1,45 @@
-<a [routerLink]="['/first-component', 123]">st Component</a>
-<img    src="..\..\assets\Haus.jpg"    alt=""/>
-<form>
-    <label for="Titel_i">Titel: </label>
-    <input type="text" id="Titel_i"  name="title" value = {{Haus.Titel}}><br>
-    <label for="Adresse_i">Adresse: </label>
-    <input type="text" id="Adresse_i" name="adress" value = {{Haus.Adresse}}><br>
-    <label for="Typ_i">Typ: </label>
-    <input type="text" id="Typ_i" name="type" value = {{Haus.Typ}}><br>
-    <label for="Beschreibung_i">Beschreibung: </label>
-    <input type="text" id="Beschreibung_i" name="info" value = {{Haus.Beschreibung}}><br>
-</form>
-<button> Aktualisieren </button>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <a routerLink='' >Zurück</a>
+    </div>
+  </div>
+  <div class="image-container">
+    <img *ngIf="Haus.ppath" [src]="'http://localhost:8080/' + Haus.ppath" alt=""/>
+    <img *ngIf="!Haus.ppath" src="..\..\assets\Haus.jpg" alt="Haus"/>
+  </div>
+  <div class="col-md-8">
+    <div class="details-container">
+        <p>Erstellt von: {{Haus.createdBy}}</p>
+        <p>Erstellt am: {{Haus.createdOn}}</p>
+        <p>ID: {{Haus.ID}}</p>
+        <p>Interessenten: {{Haus.interessenten}}</p>
+
+        <form>
+          <label for="Kurzbezeichnung_i">Kurzbezeichnung: </label>
+          <input type="text" id="Kurzbezeichnung_i" name="shortHand" [(ngModel)]="Haus.entry.shortHand"><br>
+          <label for="Typ_i">Typ: </label>
+          <input type="text" id="Typ_i" name="type" [(ngModel)]="Haus.entry.type"><br>
+          <label for="Adresse_i">Adresse: </label>
+          <input type="text" id="Adresse_i" name="address" [(ngModel)]="Haus.entry.address"><br>
+          <label for="Postal_i">Postleitzahl: </label>
+          <input type="text" id="Postal_i" name="postal" [(ngModel)]="Haus.entry.postal"><br>
+          <label for="Stadt_i">Stadt: </label>
+          <input type="text" id="Stadt_i" name="city" [(ngModel)]="Haus.entry.city"><br>
+          <label for="Groesse_i">Größe: </label>
+          <input type="text" id="Groesse_i" name="size" [(ngModel)]="Haus.entry.size"><br>
+          <label for="Kommentar_i">Kommentar: </label>
+          <input type="text" id="Kommentar_i" name="comment" [(ngModel)]="Haus.entry.comment"><br>
+          <button (click)="updateHaus()"> Aktualisieren </button>
+          <p></p>
+          <label for="Bild_i">Bild: </label>
+          <input type="file" id="Bild_i" name="picture">
+          <p></p>
+          <button (click)="updateBild()">Bild aktualisieren</button>
+          <p></p>
+          <button (click)="deleteHaus()">Haus löschen</button>
+        </form>
+
+    </div>
+
+</div>

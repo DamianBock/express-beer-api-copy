@@ -13,7 +13,7 @@ npm install
 * To start the API simply run the following command
 
 ```bash
-node beer-api.js
+node server.js
 ```
 
 ## Postman Collection

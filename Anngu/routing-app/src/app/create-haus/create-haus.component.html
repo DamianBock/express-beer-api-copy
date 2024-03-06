@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <a routerLink='' >Zurück</a>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <div class="details-container">
+      <form>
+        <label for="Kurzbezeichnung_i">Kurzbezeichnung: </label>
+        <input type="text" id="Kurzbezeichnung_i" name="shortHand" [(ngModel)]="haus.entry.shortHand"><br>
+        <label for="Typ_i">Typ: </label>
+        <input type="text" id="Typ_i" name="type" [(ngModel)]="haus.entry.type"><br>
+        <label for="Adresse_i">Adresse: </label>
+        <input type="text" id="Adresse_i" name="address" [(ngModel)]="haus.entry.address"><br>
+        <label for="Postal_i">Postleitzahl: </label>
+        <input type="text" id="Postal_i" name="postal" [(ngModel)]="haus.entry.postal"><br>
+        <label for="Stadt_i">Stadt: </label>
+        <input type="text" id="Stadt_i" name="city" [(ngModel)]="haus.entry.city"><br>
+        <label for="Groesse_i">Größe: </label>
+        <input type="text" id="Groesse_i" name="size" [(ngModel)]="haus.entry.size"><br>
+        <label for="Kommentar_i">Kommentar: </label>
+        <input type="text" id="Kommentar_i" name="comment" [(ngModel)]="haus.entry.comment"><br>
+        <button (click)="createHaus()"> Haus erstellen </button>
+      </form>
+    </div>
+  </div>
+</div>

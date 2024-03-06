@@ -1,19 +1,32 @@
-<strong>Hauptmenü</strong>
+<strong>Hauptmenü
+<p></p>
+<button routerLink='create'>Haus kreieren</button>
+<p></p>
+<button (click)="searchByType('Haus')">Sortieren nach Haus</button>
+<p></p>
+<button (click)="searchByType('Wohnung')">Sortieren nach Wohnung</button>
+<p></p>
+<button (click)="searchByType('Bauplatz')">Sortieren nach Bauplatz</button>
+<p></p>
+<button (click)="reset()">Zurücksetzen</button>
+<p></p>
+<input type="text" [(ngModel)]="searchAdresse" placeholder="Adresse eingeben" (keyup.enter)="searchByAdresse()">
   <div class="container">
     <div class="content"  *ngFor="let Haus of HausA">
       <mat-card class="item">
-         <img
-         routerLink="/haus/{{Haus.ID}}" routerLinkActive="active" ariaCurrentWhenActive="page"
+        <img routerLink="/haus/{{Haus.ID}}" routerLinkActive="active" ariaCurrentWhenActive="page"
         mat-card-image
-        src="..\..\assets\Haus.jpg"
-        alt="Photo of a Shiba Inu"
+        [src]="Haus.ppath ? 'http://localhost:8080/' + Haus.ppath : '../../assets/Haus.jpg'"
+        alt="Haus"
         />
         <mat-card-content>
-          <strong>{{Haus.Titel}}</strong>
-          <p>Typ: {{Haus.Typ}}</p>
-          <p>Adresse: {{Haus.Adresse}}</p>
-          <p>Beschreibung: {{Haus.Beschreibung}}</p>
-            
+        <strong>{{Haus.shortHand}}</strong>
+        <p>Typ: {{Haus.entry.type}}</p>
+        <p>Adresse: {{Haus.entry.address}}</p>
+        <p>PLZ: {{Haus.entry.postal}}</p>
+        <p>Stadt: {{Haus.entry.city}}</p>
+        <p>Größe: {{Haus.entry.size}}</p>
+        <p>Beschreibung: {{Haus.entry.comment}}</p>
         </mat-card-content>
         <mat-card-actions >
           <button mat-button class="item" id="Button{{Haus.ID}}}" (click)="addToFavorites(Haus.ID)">Interessiert {{Haus.Interessenten}}</button>

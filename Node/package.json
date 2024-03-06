@@ -1,17 +1,23 @@
 {
-  "name": "express-beer-api",
+  "name": "Webseite vom Damian",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Jens Reiner",
+  "author": "Damian Bock",
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "fs": "^0.0.1-security",
+    "multer": "^1.4.5-lts.1",
     "node-fetch": "^2.6.1",
+    "path": "^0.12.7",
     "random": "^4.1.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0"
   }
 }

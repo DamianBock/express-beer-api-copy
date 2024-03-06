@@ -9,11 +9,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from "@angular/forms";
 import { MatCardModule } from "@angular/material/card";
 import { MatButtonModule } from "@angular/material/button";
+import { CreateHausComponent } from './create-haus/create-haus.component';
 @NgModule({
   declarations: [
     AppComponent,
     Start,
-    Haus_Detail
+    Haus_Detail,
+    CreateHausComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,309 @@
+{
+	"info": {
+		"_postman_id": "c6ec9c30-63d2-4b8c-8d16-bc8c378ceb6e",
+		"name": "DHBW-WebProgrammierung-WWI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all Häuser",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/HausA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"HausA"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Haus",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"entry\": {\r\n    \"type\": \"Haus\",\r\n    \"address\": \"123 Main St\",\r\n    \"postal\": \"12345\",\r\n    \"city\": \"Anytown\",\r\n    \"size\": \"1000 sq ft\",\r\n    \"comment\": \"Spacious living room, large backyard\",\r\n    \"shortHand\": \"123MS\"\r\n  },\r\n  \"createdBy\": \"John Smith\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/Haus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Haus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Random Häuser",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"Adresse\": \"Höhle\",\r\n    \"Beschreibung\": \"jdsah\",\r\n    \"Titel\": \"ssd\",\r\n    \"Groesse\": \"dsa\",\r\n    \"Typ\": \"Wohnung\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/addRandomHaus/16",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addRandomHaus",
+						"16"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Random Haus",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"Adresse\": \"Höhle\",\r\n    \"Beschreibung\": \"jdsah\",\r\n    \"Titel\": \"ssd\",\r\n    \"Groesse\": \"dsa\",\r\n    \"Typ\": \"Wohnung\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/addRandomHaus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"addRandomHaus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Haus ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Haus/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Haus",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Haus",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Haus/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Haus",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Haus",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"entry\": {\r\n    \"type\": \"Haus\",\r\n    \"address\": \"123 Main St\",\r\n    \"postal\": \"12345\",\r\n    \"city\": \"Anytown\",\r\n    \"size\": \"1000 sq ft\",\r\n    \"comment\": \"Spacious living room, large backyard\",\r\n    \"shortHand\": \"123MS\"\r\n  },\r\n  \"createdBy\": \"John Smith\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/Haus/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Haus",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Interessenten + 1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/InteressentenP/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"InteressentenP",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Interessenten - 1",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/InteressentenM/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"InteressentenM",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filtern nach Haustyp",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/HausA/type/Haus",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"HausA",
+						"type",
+						"Haus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filtern nach Adresse",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/HausA/address/al",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"HausA",
+						"address",
+						"al"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Interessenten",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/Haus/Interessenten/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"Haus",
+						"Interessenten",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
